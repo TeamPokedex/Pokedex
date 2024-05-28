@@ -14,3 +14,5 @@
                 //LIST POKEMON TYPES
         }
     }
+
+require('./views/search.php');
