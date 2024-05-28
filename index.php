@@ -1,18 +1,19 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
 
-    var_dump($_GET);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/public/assets/img/favicon.ico" type="image/x-icon">
+    <title>Accueil</title>
+</head>
 
-    if(empty($_GET['q'])){
-        //LIST POKEMON TYPES
+<body>
+    <?php
+    require('./views/search.php');
+    require('./views/pokemon/details.php');
+    ?>
+</body>
 
-    }else{
-        switch ($_GET['q']){
-            case "home":
-
-                break;
-            default:
-                //LIST POKEMON TYPES
-        }
-    }
-
-require('./views/search.php');
+</html>
