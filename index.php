@@ -1,11 +1,16 @@
 <?php
 
-switch ($_GET['q']) {
-    case 'value':
-        echo "ok";
-        break;
+if (!empty($_GET['q'])) {
 
-    default:
-        echo "pas ok";
-        break;
+    switch ($_GET['q']) {
+        case 'value':
+            echo "ok";
+            break;
+
+        default:
+            echo "pas ok";
+            break;
+    }
+} else {
+    echo "merguez";
 }
