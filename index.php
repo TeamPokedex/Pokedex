@@ -1,16 +1,14 @@
-<?php 
+<?php
 
-    var_dump($_GET);
+    php_info();
 
-    if(empty($_GET['q'])){
-        //LIST POKEMON TYPES
-
-    }else{
-        switch ($_GET['q']){
-            case "home":
-
-                break;
-            default:
-                //LIST POKEMON TYPES
-        }
+    switch ($_GET['q']) {
+        case 'value':
+            echo "ok";
+            break;
+        
+        default:
+            echo "pas ok";
+            break;
     }
+    
