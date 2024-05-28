@@ -29,11 +29,11 @@ $pokemonListDecode = json_decode($pokemonList);
                                 <p class="card-text">ID: <?= $value->id ?></p>
                             </div>
                         </div>
-                    </div>
-                <?php }
+                    <?php }
             } else { ?>
-                <p>Erreur lors de la récupération des données.</p>
-            <?php } ?>
+                    <p>Erreur lors de la récupération des données.</p>
+                <?php } ?>
+                    </div>
         </div>
     </div>
 </body>
