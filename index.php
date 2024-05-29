@@ -1,30 +1,35 @@
-<?php 
+<?php
 
-    $urlPokemons = 'https://pokebuildapi.fr/api/v1/pokemon';
-    $urlTypes = 'https://pokebuildapi.fr/api/v1/types';
+$urlPokemons = 'https://pokebuildapi.fr/api/v1/pokemon';
+$urlTypes = 'https://pokebuildapi.fr/api/v1/types';
 
-    $pokemonsType = file_get_contents($urlTypes);
-    $pokemonsType = json_decode($pokemonsType);
+$pokemonsType = file_get_contents($urlTypes);
+$pokemonsType = json_decode($pokemonsType);
 
-    switch (!empty($_GET['type'])){
-        case "":
-            break;
-        case "":
-            break;
-    }
-    
+switch (!empty($_GET['type'])) {
+    case "":
+        break;
+    case "":
+        break;
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/assets/css/style.css">
     <title>POKEDEX</title>
 </head>
+
 <body>
     <header>
         <nav class="d-xl-none d-flex justify-content-around align-items-center py-3">
@@ -43,9 +48,15 @@
             </div>
             <div class="d-xl-none d-none mobile-nav-menu position-absolute start-0">
                 <ul class="my-2">
-                    <li class="mb-3 text-light"><p>Accueil</p></li>
-                    <li class="mb-3 text-light"><p>Pokédex</p></li>
-                    <li class="mb-3 text-light"><p>Paramètres</p></li>
+                    <li class="mb-3 text-light">
+                        <p>Accueil</p>
+                    </li>
+                    <li class="mb-3 text-light">
+                        <p>Pokédex</p>
+                    </li>
+                    <li class="mb-3 text-light">
+                        <p>Paramètres</p>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -74,7 +85,7 @@
     </main>
 
     <div class="d-flex flex-wrap justify-content-around">
-        <?php foreach ($pokemonsType as $pokemonType): ?>
+        <?php foreach ($pokemonsType as $pokemonType) : ?>
             <div class="text-center card-type">
                 <img src='<?= $pokemonType->image ?>'>
                 <a href='<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
@@ -82,7 +93,10 @@
         <?php endforeach; ?>
     </div>
 
+    <?php require_once 'partials/footer.php'; ?>
+
     <script src="public/assets/js/script.js"></script>
     <script src="public/assets/js/navbar.js"></script>
 </body>
+
 </html>
