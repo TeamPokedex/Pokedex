@@ -1,7 +1,10 @@
 services:
   web:
-    image: php:8.3-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 8080:80
     volumes:
       - ./:/var/www/html/
+      - ./apache.conf:/usr/local/apache2/conf/httpd.conf

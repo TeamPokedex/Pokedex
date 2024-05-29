@@ -1,0 +1,5 @@
+# Activer le moteur de réécriture
+RewriteEngine On
+
+# Règle pour réécrire l'URL
+RewriteRule ^pokemon/([0-9]+)$ controllers/pokemonDetailsController.php?id=$1 [L,QSA]
