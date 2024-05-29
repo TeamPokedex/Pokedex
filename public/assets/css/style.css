@@ -1,3 +1,7 @@
+body {
+  background-color: #f5f5f5;
+}
+
 header {
   background-color: #D93611;
 }
@@ -5,6 +9,42 @@ header {
 main div img {
   width: 100%;
   max-width: 500px;
+}
+
+.mobile-nav-menu {
+  background-color: #D93611;
+  margin-top: 18em !important;
+  width: 100%;
+  text-align: center;
+}
+.mobile-nav-menu ul {
+  padding: 0;
+  list-style-type: none !important;
+}
+.mobile-nav-menu ul li {
+  display: inline-block;
+  width: 50%;
+}
+
+form {
+  width: 70%;
+  max-width: 500px;
+}
+form input {
+  border: 3px 0 3px 3px solid grey !important;
+}
+form input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-pokemon {
+  background-color: #D93611;
+  color: white;
+}
+.btn-pokemon:hover {
+  background-color: #D93611;
+  color: white;
 }
 
 .card-type {
