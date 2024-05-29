@@ -1,15 +1,9 @@
 <?php
 
-//require('./models/Type.php');
 require('./models/Pokemon.php');
 
-//$types = getAllTypes();
-$type = filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS);
+$type = filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS) ?? 'plante';
 
-// if(!isExistingType($type)) {
-//     // return 404
-// }
-
-$pokemonListDecode = getAllPokemonByType($type ?? 'plante');
+$pokemonListDecode = getAllPokemonByType($type);
 
 require('./views/pokemon/list.php');
