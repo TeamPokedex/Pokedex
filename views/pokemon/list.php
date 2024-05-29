@@ -42,7 +42,7 @@ $typeColors = [
                             }?></p>
                         </div>
                         <div class="card-footer">
-                            <a href="pokemon/<?= $pokemon->id ?>">Voir + de détails</a>
+                            <a href="/pokemon/<?= $pokemon->id ?>">Voir + de détails</a>
                         </div>
                     </div>
                 </div>
