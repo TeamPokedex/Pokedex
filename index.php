@@ -1,5 +1,4 @@
 <?php
-// require('./views/templates.php');
 require('./partials/header.php');
 require('./controllers/pokemonListController.php');
 require('./partials/footer.php');
