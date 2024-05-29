@@ -1,12 +1,6 @@
 <?php
-//all pokemon water from api
-$urlPokemonsWater = 'https://pokebuildapi.fr/api/v1/pokemon/type/Eau';
-
-$pokemonListWater = file_get_contents($urlPokemonsWater);
-
-$pokemonListWaterDecode = json_decode($pokemonListWater);
+require('./controllers/pokemonListController.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -20,7 +14,6 @@ $pokemonListWaterDecode = json_decode($pokemonListWater);
 
 <body>
     <?php
-    require('./views/search.php');
     // display of all pokemon water
     if (is_array($pokemonListWaterDecode)) {
         foreach ($pokemonListWaterDecode as $value) { ?>
