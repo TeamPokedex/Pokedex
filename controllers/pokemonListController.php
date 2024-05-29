@@ -1,12 +1,7 @@
 <?php
-$pokemonApiUrl = "https://pokebuildapi.fr/api/v1/pokemon/limit/100";
+// require('../views/pokemon/list.php');
+require('./models/Pokemon.php');
+$type = filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS);
+$pokemonListDecode = getAllPokemonByType($type);
 
-if(isset($_GET["type"]) && !empty($_GET["type"]))
-{
-    $pokemonApiUrl = "https://pokebuildapi.fr/api/v1/pokemon/type/".htmlspecialchars($_GET["type"]);
-}
-
-$pokemonList = file_get_contents($pokemonApiUrl);
-$pokemonListDecode = json_decode($pokemonList);
-
-require('../views/pokemon/list.php');
+require('./views/pokemon/list.php');
