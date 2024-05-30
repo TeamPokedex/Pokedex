@@ -27,8 +27,9 @@
                     <p class="m-0 fs-12 text-light">Favoris</p>
                 </div>
                 <div class="mx-3">
-                    <i class="fa-solid fa-user fs-4 mx-3"></i>
-                    <p class="m-0 fs-12 text-light">Profil</p>
+                    <div class="iconContenair">
+                        <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon; ?>" alt="<?= $currentName; ?>" class="icon-option" width="50">
+                    </div>
                 </div>
             </div>
             <div class="d-xl-none d-none mobile-nav-menu position-absolute start-0">
@@ -37,7 +38,10 @@
                         <a href="/">Accueil</a>
                     </li>
                     <li class="mb-3 text-light">
-                        <a href="">Pokédex</a>
+                        <a href="/?pokedex">Pokédex</a>
+                    </li>
+                    <li class="mb-3 text-light">
+                        <a href="/?favorites">Favoris</a>
                     </li>
                     <li class="mb-3 text-light">
                         <a href="/?param">Paramètres</a>
@@ -57,15 +61,18 @@
             </p>
 
             <a href="/" class="text-light fw-bold">ACCUEIL</a>
-            <a href="" class="text-light fw-bold">POKEDEX</a>
+            <a href="/?pokedex" class="text-light fw-bold">POKEDEX</a>
+            <a href="/?favorites" class="text-light fw-bold">FAVORIS</a>
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center">
-                    <i class="fa-solid fa-heart fs-2"></i>
-                    <p class="m-0 fs-12 text-light">Favoris</p>
-                </div>
-                <div class="mx-3 text-center">
-                    <i class="fa-solid fa-heart fs-2"></i>
-                    <p class="m-0 fs-12 text-light">Profil</p>
+                    <div id="profile">
+                        <div class="row">
+                            <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option">
+                        </div>
+                        <div class="row">
+                            <span class="pseudo"><?= $currentName ?? "Profil" ?></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

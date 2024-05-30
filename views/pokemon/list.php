@@ -23,14 +23,14 @@ $typeColors = [
 <div class="container" id="list-container">
     <!-- style="background-color:<?= $typeColors[$type] ?>" -->
     <div class="row">
-        <h1 class="text-center fs-1 my-5"><?= htmlspecialchars($_GET['type']) ?></h1>
+        <h1 class="text-center fs-1 my-5"><?= $type ?? '' ?></h1>
         <?php
         if (is_array($pokemonList)) {
             foreach ($pokemonList as $pokemon) {
         ?>
                 <div class="col-md-4 mb-4">
                     <div class="card" data-type="<?= $pokemon->type ?>">
-                        <form action=".?type=<?= $type ?>" method="POST">
+                        <form action="" method="POST">
                             <input type="hidden" name="favorite_id" value="<?= $pokemon->id ?>"/>
                             <button type="submit" class="btn position-absolute" style="top: 5px; right: 5px;"><i class="fa-solid fs-1 fa-heart favorite-icon <?= (in_array((int)$pokemon->id, $favorites)) ? "enabled-favorite-icon" : "disabled-favorite-icon" ?>"></i></button>
                         </form>

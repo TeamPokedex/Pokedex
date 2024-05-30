@@ -22,31 +22,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         storeArrayInCookie("favorites", array_unique($favorites));
     }
 
-     // Récupérer et sécuriser les données du formulaire
-     $currentName = isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : $currentName;
-     $currentIcon = isset($_POST['icon']) ? htmlspecialchars($_POST['icon']) : $currentIcon;
-     if(isset($_POST['mode']) && !empty($_POST['mode']))
-     {
+    // Récupérer et sécuriser les données du formulaire
+    $currentName = isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : $currentName;
+    $currentIcon = isset($_POST['icon']) ? htmlspecialchars($_POST['icon']) : $currentIcon;
+    if (isset($_POST['mode']) && !empty($_POST['mode'])) {
         $currentMode = 'dark';
-     }
-     else {
+    } else {
         $currentMode = 'light';
-     }
- 
-     // Cookies
-     saveCookie('pseudo',$currentName);
-     saveCookie('icon', $currentIcon);
-     saveCookie('mode', $currentMode);
- 
+    }
+
+    // Cookies
+    saveCookie('pseudo', $currentName);
+    saveCookie('icon', $currentIcon);
+    saveCookie('mode', $currentMode);
 }
 
-if (!empty($_GET['type'])) {
+if (isset($_GET['pokedex']) || !empty($_GET['type'])) {
     require('controllers/pokemonListController.php');
-} else if(!empty($_GET['id'])) {
+} else if (!empty($_GET['id'])) {
     require('controllers/pokemonDetailsController.php');
-} else if(isset($_GET['settings']))
-{
+} else if (isset($_GET['param'])) {
     require('controllers/paramController.php');
+} else if (isset($_GET["favorites"])) {
+    require('controllers/favourListController.php');
 } else {
     require('controllers/homeController.php');
 }
