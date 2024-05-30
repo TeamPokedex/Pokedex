@@ -50,22 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public/assets/css/style.css">
-    <title>POKEDEX</title>
-</head>
-
 <body>
     <header>
         <nav class="d-xl-none d-flex justify-content-around align-items-center py-3">
@@ -100,14 +84,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="menu-image py-1">
                 <img src="public/assets/img/logoPokeworld.png" alt="">
             </div>
-            
+
             <p class="position-relative w-25">
                 <input type="text" placeholder="ex : pikachu" class="form-control">
-                    <a href="https://www.google.com" class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2"></a>
+                <a href="https://www.google.com" class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2"></a>
                 </input>
             </p>
-            
-                <p class="text-light fw-bold">ACCUEIL</p>
+
+            <p class="text-light fw-bold">ACCUEIL</p>
             <p class="text-light fw-bold">POKEDEX</p>
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center">
@@ -140,11 +124,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="d-flex flex-wrap justify-content-center mx-0 mx-xl-5 my-5 container-list-pokemon">
             <p class="w-100 text-center mt-5 mb-5 fs-5">Classe la liste les Pokémon par type :</p><br>
-            <?php foreach ($pokemonsType as $pokemonType): ?>
+            <?php foreach ($pokemonsType as $pokemonType) : ?>
                 <div class="text-center card-type mb-3 d-flex flex-wrap">
                     <button class="btn border">
                         <img class="w-75" src='<?= $pokemonType->image ?>'>
-                        <a class="fs-5"href='<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
+                        <a class="fs-5" href='<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
                     </button>
                 </div>
             <?php endforeach; ?>
@@ -154,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="container-pokeball text-center w-50">
                 <img src="public/assets/img/pokeball.png" alt="" class="img-pokeball">
             </div>
-            
+
             <p class="container-sacha text-end w-50 pe-5">
                 <img src="public/assets/img/sacha.webp" alt="">
             </p>
@@ -171,10 +155,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="public/assets/css/style.css">
 
-
-</head>
-
-<body>
     <div class="text-center">
         <img src="./public/assets/img/title/parametres.png" alt="Parametres" class="title-image">
     </div>
@@ -219,10 +199,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     </div>
-    <script src="public/assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-
-</html>
-require('./controllers/typeListController.php');
+    <?php require('./controllers/typeListController.php');
