@@ -9,14 +9,14 @@ $typeColors = [
     'dragon' => 'red',
     'tenebres' => 'black',
     'fee' => 'pink',
-    'normal' => 'gray',
+    'normal' => 'grey',
     'combat' => 'red',
     'vol' => 'blue',
     'poison' => 'purple',
     'sol' => 'brown',
-    'roche' => 'gray',
+    'roche' => 'grey',
     'insecte' => 'green',
-    'acier' => 'gray',
+    'acier' => 'grey',
     'spectre' => 'black',
 ];
 ?>
