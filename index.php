@@ -1,30 +1,10 @@
 <?php
 
-    // var_dump($_SERVER['REQUEST_URI']);
-
-    // var_dump($_GET['type']);
-    // var_dump($_GET);
-    // var_dump($_SERVER['HTTP_HOST']);
-
     if(!empty($_GET['type'])){
         require('controllers/pokemonListController.php');
-    }elseif (1 === 50) {
-        # code...
     }else{
         require('controllers/homeController.php');
     }
-   
-
-    // var_dump($_GET);
-
-    // switch (!empty($_GET)) {
-    //     case "param":
-    //         require("controllers/paramController.php");
-    //         break;
-    //     default:
-    //         require("controllers/homeController.php");
-    //         break;
-    // }
 
 // Liste des icônes disponibles
 /* $icons = [

@@ -51,8 +51,8 @@
             </div>
 
             <p class="position-relative w-25">
-                <input type="text" placeholder="ex : pikachu" class="form-control">
-                <a href="https://www.google.com" class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2"></a>
+                <input type="text" placeholder="ex : pikachu" class="form-control input-search">
+                <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2"></a>
                 </input>
             </p>
 

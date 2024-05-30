@@ -23,11 +23,10 @@ $typeColors = [
 <div class="container" id="list-container">
 <!-- style="background-color:<?= $typeColors[$type] ?>" -->
     <div class="row">
+        <h1 class="text-center"><?= htmlspecialchars($_GET['type']) ?></h1>
         <?php
         if (is_array($pokemonList)) {
             foreach ($pokemonList as $pokemon) {
-                // var_dump($value);
-                // die;
         ?>
                 <div class="col-md-4 mb-4">
                     <div class="card" data-type="<?= $pokemon->type ?>">

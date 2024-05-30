@@ -273,6 +273,7 @@ input:checked + .toggle-label:after {
   justify-content: center;
 }
 
+
 .pokemon-type-logo {
   height: 32px;
   width: 32px;
