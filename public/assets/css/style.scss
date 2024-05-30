@@ -4,7 +4,7 @@ $bg-light-color : #f5f5f5;
 $bg-dark-color : #343232;
 
 body {
-     background-color: $bg-light-color;
+    background-color: $bg-light-color;
 }
 
 // body[data-theme="dark"]{
@@ -16,12 +16,14 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: $red;
+
     nav {
         p {
             margin: 0 !important;
-        } 
+        }
     }
 }
 
@@ -41,7 +43,7 @@ main {
         width: 300px;
         transform: translateX(50%);
     }
-    
+
     .container-sacha {
         img {
             animation-name: sachaEffect;
@@ -59,6 +61,7 @@ main {
 
 .menu-image {
     width: 28%;
+
     img {
         width: 100%;
         max-width: 450px;
@@ -70,9 +73,11 @@ main {
     margin-top: 13em !important;
     width: 100%;
     text-align: center;
+
     ul {
         padding: 0;
         list-style-type: none !important;
+
         li {
             display: inline-block;
             width: 50%;
@@ -81,11 +86,13 @@ main {
 }
 
 form {
-    width: 70%; 
-    min-width: 300px;  
+    width: 70%;
+    min-width: 300px;
     max-width: 600px;
+
     input {
-        border:  3px 0 3px 3px solid grey !important;
+        border: 3px 0 3px 3px solid grey !important;
+
         &:focus {
             outline: none !important;
             box-shadow: none !important;
@@ -94,7 +101,7 @@ form {
 }
 
 p {
-    .search-bar-menu{
+    .search-bar-menu {
         transform: translateY(-150%);
     }
 }
@@ -102,6 +109,7 @@ p {
 .btn-pokemon {
     background-color: #D93611;
     color: white;
+
     &:hover {
         background-color: #D93611;
         color: white;
@@ -115,11 +123,13 @@ p {
     text-align: center;
     width: 5%;
     min-width: 180px;
+
     a {
         text-decoration: none;
         font-size: .8em;
         width: 100%;
     }
+
     img {
         max-width: 50px;
     }
@@ -138,7 +148,8 @@ footer {
         margin-top: -1200px;
         margin-left: 20000px;
     }
-    100%{
+
+    100% {
         transform: rotate(155550deg) scale(2);
         margin-left: 0;
         margin-top: 0;
@@ -150,10 +161,12 @@ footer {
     0% {
         margin-left: 2000px;
     }
+
     100% {
         margin-left: 0;
     }
 }
+
 $bg-light-color : #f5f5f5;
 $bg-dark-color : #343232;
 $blue-dark: #1C2B59;
@@ -329,25 +342,34 @@ ul {
 
 /* Style for the progress bar background */
 .progress {
-    background-color: #e9ecef; /* Light grey color for the bar background */
-    overflow: hidden; /* Ensure content doesn't overflow */
-    position: relative; /* Allow absolute positioning within */
+    background-color: #e9ecef;
+    /* Light grey color for the bar background */
+    overflow: hidden;
+    /* Ensure content doesn't overflow */
+    position: relative;
+    /* Allow absolute positioning within */
 }
 
 /* Style for the progress bar fill */
 .progress-bar-custom {
-    background-color: yellow; /* Yellow color for the progress bar fill */
-    position: absolute; /* Absolute positioning within the progress bar */
-    height: 100%; /* Full height */
-    transition: width 0.6s ease; /* Smooth transition for width changes */
+    background-color: yellow;
+    /* Yellow color for the progress bar fill */
+    position: absolute;
+    /* Absolute positioning within the progress bar */
+    height: 100%;
+    /* Full height */
+    transition: width 0.6s ease;
+    /* Smooth transition for width changes */
 }
 
-.btn-favoris .fa-heart {
-    color: white;
-    font-size: 24px;
-    transition: color 0.3s;
+.favorite-icon {
+    cursor: pointer;
 }
 
-.btn-favoris.active .fa-heart {
-    color: red;
+.disabled-favorite-icon {
+    color: #b5b5b5;
+}
+
+.enabled-favorite-icon {
+    color: $red;
 }

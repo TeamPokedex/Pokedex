@@ -1,4 +1,4 @@
-<?php 
+<?php
 $typeColors = [
     'eau' => 'blue',
     'feu' => 'orange',
@@ -21,7 +21,7 @@ $typeColors = [
 ];
 ?>
 <div class="container" id="list-container">
-<!-- style="background-color:<?= $typeColors[$type] ?>" -->
+    <!-- style="background-color:<?= $typeColors[$type] ?>" -->
     <div class="row">
         <h1 class="text-center"><?= htmlspecialchars($_GET['type']) ?></h1>
         <?php
@@ -30,16 +30,21 @@ $typeColors = [
         ?>
                 <div class="col-md-4 mb-4">
                     <div class="card" data-type="<?= $pokemon->type ?>">
+                        <form action=".?type=<?= $type ?>" method="POST">
+                            <input type="hidden" name="favorite_id" value="<?= $pokemon->id ?>"/>
+                            <button type="submit" class="btn position-absolute" style="top: 5px; right: 5px;"><i class="fa-solid fa-heart favorite-icon <?= (in_array((int)$pokemon->id, $favorites)) ? "enabled-favorite-icon" : "disabled-favorite-icon" ?>"></i></button>
+                        </form>
                         <img src="<?= $pokemon->image ?>" class="card-img-top" alt="<?= $pokemon->name ?>">
                         <div class="card-body">
                             <h5 class="card-title"><?= $pokemon->name ?></h5>
                             <p class="card-text">ID: <?= $pokemon->id ?></p>
-                            <p class="card-text">Type(s): <?php 
-                            foreach ($pokemon->apiTypes as $pokemonType) { ?>
-                            <img src="<?= $pokemonType->image ?>" name="<?= $pokemonType->name ?>" class="pokemon-type-logo"/>
-                              <?= $pokemonType->name?> 
-                              <?php  
-                            }?></p>
+                            <p class="card-text">Type(s): <?php
+                                                            foreach ($pokemon->apiTypes as $pokemonType) { ?>
+                                    <img src="<?= $pokemonType->image ?>" name="<?= $pokemonType->name ?>" class="pokemon-type-logo" />
+                                    <?= $pokemonType->name ?>
+                                <?php
+                                                            } ?>
+                            </p>
                         </div>
                         <div class="card-footer">
                             <a href="/pokemon/<?= $pokemon->id ?>">Voir + de détails</a>

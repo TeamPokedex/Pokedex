@@ -1,5 +1,4 @@
 <?php
-
 require(__DIR__.'/../models/Pokemon.php');
 
 $type = filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS) ?? 'plante';
