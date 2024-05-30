@@ -2,6 +2,7 @@
 
 $urlPokemons = 'https://pokebuildapi.fr/api/v1/pokemon';
 $urlTypes = 'https://pokebuildapi.fr/api/v1/types';
+$urlAllPokemonByType = 'https://pokebuildapi.fr/api/v1/type/';
 
 $pokemonsType = file_get_contents($urlTypes);
 $pokemonsType = json_decode($pokemonsType);
@@ -103,12 +104,12 @@ switch (!empty($_GET['type'])) {
         </form>
 
         <div class="d-flex flex-wrap justify-content-center mx-0 mx-xl-5 my-5 container-list-pokemon">
-            <p class="w-100 text-center mt-5 mb-5 fs-5">Classe la liste les Pokémon par type :</p><br>
+            <!-- <p class="w-100 text-center mt-5 mb-5 fs-5">Classe la liste les Pokémon par type :</p><br> -->
             <?php foreach ($pokemonsType as $pokemonType): ?>
                 <div class="text-center card-type mb-3 d-flex flex-wrap">
                     <button class="btn border">
                         <img class="w-75" src='<?= $pokemonType->image ?>'>
-                        <a class="fs-5"href='<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
+                        <a class="fs-5" href='./?q=listallpokemon&type=<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
                     </button>
                 </div>
             <?php endforeach; ?>
