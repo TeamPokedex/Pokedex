@@ -30,6 +30,8 @@ const searchByPokemonName = async (name) => {
         if(req.status === 200){
             const pokemon = await req.json();
             window.location.href = "http://localhost:8080?id=" + pokemon.id
+        }else{
+            window.location.href = "http://localhost:8080/404.php";
         }
     } catch (e) {
         console.log(e);
@@ -65,6 +67,5 @@ searchbarMenu.addEventListener('click', () => {
     }else{
         searchByPokemonName(inputSearch.value);
     }
-    // window.location.href = 'https://www.google.com';
 })
 

@@ -34,13 +34,13 @@
             <div class="d-xl-none d-none mobile-nav-menu position-absolute start-0">
                 <ul class="my-2">
                     <li class="mb-3 text-light">
-                        <p>Accueil</p>
+                        <a href="/">Accueil</a>
                     </li>
                     <li class="mb-3 text-light">
-                        <p>Pokédex</p>
+                        <a href="">Pokédex</a>
                     </li>
                     <li class="mb-3 text-light">
-                        <p>Paramètres</p>
+                        <a href="/?param">Paramètres</a>
                     </li>
                 </ul>
             </div>

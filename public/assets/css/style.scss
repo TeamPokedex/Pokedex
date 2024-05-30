@@ -7,6 +7,19 @@ body {
     background-color: $bg-light-color;
 }
 
+.fa-search {
+    cursor: pointer;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+a {
+    text-decoration: none;
+    color: #343232;
+}
+
 // body[data-theme="dark"]{
 //      background-color: $bg-dark-color;
 // }
@@ -23,17 +36,15 @@ header {
     nav {
         p {
             margin: 0 !important;
-<<<<<<< HEAD
         } 
         a {
             text-decoration: none;
-=======
->>>>>>> 86e974ada62ba301e5dd1aee25c5e55faf0b45c5
         }
     }
 }
 
 main {
+    min-height: 70vh;
     div {
         img {
             width: 100%;
