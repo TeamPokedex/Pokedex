@@ -1,7 +1,7 @@
 <?php
 
     switch (!empty($_GET)) {
-        case "/param":
+        case "param":
             require("controllers/paramController.php");
             break;
         default:
