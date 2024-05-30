@@ -27,7 +27,7 @@ main .pokeball {
 
 .mobile-nav-menu {
   background-color: #D93611;
-  margin-top: 16em !important;
+  margin-top: 13em !important;
   width: 100%;
   text-align: center;
 }
@@ -67,7 +67,8 @@ form input:focus {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  width: 9%;
+  width: 5%;
+  min-width: 180px;
 }
 .card-type a {
   text-decoration: none;
