@@ -1,6 +1,4 @@
 <?php
-// if (isset($_GET["type"]) && !empty($_GET["type"])) {
-// }
 
 function getAllTypes()
 {
