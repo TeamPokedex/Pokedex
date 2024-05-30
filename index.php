@@ -1,21 +1,13 @@
 <?php
 
-$urlPokemons = 'https://pokebuildapi.fr/api/v1/pokemon';
-$urlTypes = 'https://pokebuildapi.fr/api/v1/types';
-
-$pokemonsType = file_get_contents($urlTypes);
-$pokemonsType = json_decode($pokemonsType);
-
-switch (!empty($_GET)) {
-    case "/param":
-        require("controllers/paramController.php");
-        break;
-    default:
-        require("partials/header.php");
-        require("views/home.php");
-        require("partials/footer.php");
-        break;
-}
+    switch (!empty($_GET)) {
+        case "/param":
+            require("controllers/paramController.php");
+            break;
+        default:
+            require("controllers/homeController.php");
+            break;
+    }
 
 // Liste des icônes disponibles
 /* $icons = [

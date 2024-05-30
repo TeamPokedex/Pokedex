@@ -2,10 +2,10 @@
     
     require(__DIR__.'/../models/Pokemon.php');
 
-    $type = filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS) ?? 'plante';
+    // $type = filter_input(INPUT_GET, 'type', FILTER_SANITIZE_SPECIAL_CHARS) ?? 'plante';
     
-    $pokemonList = getAllPokemonByType($type);
+    $pokemonsType = getAllPokemonTypes();
     
     require(__DIR__.'/../partials/header.php');
-    require(__DIR__.'/../views/param/home.php');
+    require(__DIR__.'/../views/home.php');
     require(__DIR__.'/../partials/footer.php');
