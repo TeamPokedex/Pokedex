@@ -28,3 +28,14 @@ ul {
     height: 100%; /* Full height */
     transition: width 0.6s ease; /* Smooth transition for width changes */
 }
+
+.btn-favoris .fa-heart {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.btn-favoris.active .fa-heart {
+    color: red;
+}
+

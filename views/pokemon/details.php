@@ -32,6 +32,9 @@ $typeColors = [
                 <!-- pokemon image -->
                 <div class="card ml-5" style="width: 100%;">
                     <img class="card-img-top img-fluid" src="<?= htmlspecialchars($pokemon->image) ?>" title="<?= htmlspecialchars($pokemon->name) ?>" />
+                    <button class="btn btn-favoris" onclick="toggleFavoris(this)" style="position: absolute; top: 10px; right: 10px; background: none; border: none;">
+                        <i class="fas fa-heart"></i>
+                    </button>
                 </div>
                 <!-- end pokemon image -->
             </div>
