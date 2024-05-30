@@ -21,7 +21,7 @@
             <div class="text-center card-type mb-3 d-flex flex-wrap">
                 <button class="btn border">
                     <img class="w-75" src='<?= $pokemonType->image ?>'>
-                    <a class="fs-5" href='<?=  . $pokemonType->name ?>'><?= $pokemonType->name ?></a>
+                    <a class="fs-5" href='?type=<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
                 </button>
             </div>
         <?php endforeach; ?>

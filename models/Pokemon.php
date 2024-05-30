@@ -1,7 +1,7 @@
 <?php
 
 function getAllPokemonByType($type) {
-    $url = 'https://pokebuildapi.fr/api/v1/pokemon';
+    $url = 'https://pokebuildapi.fr/api/v1/pokemon/type/';
     $pokemonApiUrl = $url . $type;
     $pokemonList = file_get_contents($pokemonApiUrl);
     $result = json_decode($pokemonList);

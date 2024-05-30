@@ -1,14 +1,19 @@
 <?php
 
-    var_dump($_SERVER['REQUEST_URI']);
-    var_dump($_SERVER['HTTP_HOST']);
+    // var_dump($_SERVER['REQUEST_URI']);
 
+    // var_dump($_GET['type']);
+    // var_dump($_GET);
+    // var_dump($_SERVER['HTTP_HOST']);
 
-    switch ($_SERVER['REQUEST_URI']) {
-        case '/':
-            require('controllers/homeController.php');
-            break;
+    if(!empty($_GET['type'])){
+        require('controllers/pokemonListController.php');
+    }elseif (1 === 50) {
+        # code...
+    }else{
+        require('controllers/homeController.php');
     }
+   
 
     // var_dump($_GET);
 

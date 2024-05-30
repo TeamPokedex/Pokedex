@@ -20,7 +20,8 @@ $typeColors = [
     'spectre' => 'black',
 ];
 ?>
-<div class="container" id="list-container" style="background-color:<?= $typeColors[$type] ?>">
+<div class="container" id="list-container">
+<!-- style="background-color:<?= $typeColors[$type] ?>" -->
     <div class="row">
         <?php
         if (is_array($pokemonList)) {
