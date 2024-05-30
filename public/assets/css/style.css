@@ -15,6 +15,9 @@ header {
 header nav p {
   margin: 0 !important;
 }
+header nav a {
+  text-decoration: none;
+}
 
 main div img {
   width: 100%;
