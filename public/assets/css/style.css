@@ -60,6 +60,10 @@ form input:focus {
   box-shadow: none !important;
 }
 
+p .search-bar-menu {
+  transform: translateY(-150%);
+}
+
 .btn-pokemon {
   background-color: #D93611;
   color: white;
@@ -92,34 +96,3 @@ footer {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-.footer {
-  background-color: #D93611;
-  width: 100%;
-  color: #F5F5F5;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.open-sans-regular {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  font-size: 14px;
-}
-
-.open-sans-light {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  font-size: 12px;
-}
-
-.font404 {
-  color: #D93611;
-  font-size: 44px;
-}

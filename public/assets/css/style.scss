@@ -74,6 +74,12 @@ form {
     }
 }
 
+p {
+    .search-bar-menu{
+        transform: translateY(-150%);
+    }
+}
+
 .btn-pokemon {
     background-color: #D93611;
     color: white;

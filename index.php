@@ -64,10 +64,13 @@ switch (!empty($_GET['type'])) {
             <div class="menu-image py-1">
                 <img src="public/assets/img/logoPokeworld.png" alt="">
             </div>
-            <div>
-                <input type="text" placeholder="rechercher un pokemon via son NOM ou ID" class="form-control w-25 position-relative">
-                <i class="fa-solid fa-search position-absolute"></i>
-            </div>
+            
+            <p class="position-relative w-25">
+                <input type="text" placeholder="rechercher un pokemon via son NOM ou ID" class="form-control">
+                    <a href="https://www.google.com" class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2"></a>
+                </input>
+            </p>
+            
                 <p class="text-light fw-bold">ACCUEIL</p>
             <p class="text-light fw-bold">POKEDEX</p>
             <div class="d-flex flex-wrap justify-content-end">
