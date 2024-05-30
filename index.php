@@ -12,11 +12,28 @@ $icons = [
 
 ];
 
+// Initialiser les variables
+$currentName = '';
+$currentIcon = '';
+$currentMode = 'light';
 
-// Récupérer les paramètres existants (si nécessaire, par exemple depuis une base de données)
-$currentName = isset($_POST['name']) ? $_POST['name'] : '';
-$currentIcon = isset($_POST['icon']) ? $_POST['icon'] : '';
-$currentMode = isset($_POST['mode']) ? $_POST['mode'] : 'light';
+// Vérifier si le formulaire a été soumis
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Récupérer et sécuriser les données du formulaire
+    $currentName = isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : '';
+    $currentIcon = isset($_POST['icon']) ? htmlspecialchars($_POST['icon']) : '';
+    $currentMode = isset($_POST['mode']) && $_POST['mode'] == 'on' ? 'dark' : 'light';
+
+    // Cookies
+    setcookie('pseudo', $currentName, time() + (30 * 24 * 60 * 60), "/");
+    setcookie('icon', $currentIcon, time() + (30 * 24 * 60 * 60), "/");
+    setcookie('mode', $currentMode, time() + (30 * 24 * 60 * 60), "/");
+
+    // Mettre à jour les variables
+    $_COOKIE['pseudo'] = $currentName;
+    $_COOKIE['icon'] = $currentIcon;
+    $_COOKIE['mode'] = $currentMode;
+}
 ?>
 
 
@@ -34,15 +51,16 @@ $currentMode = isset($_POST['mode']) ? $_POST['mode'] : 'light';
 
 </head>
 
-<body class="bg-light">
-    <h1 class="text-center">Paramètres</h1>
-
+<body>
+    <div class="text-center">
+        <img src="./public/assets/img/title/parametres.png" alt="Parametres" class="title-image">
+    </div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card mt-5">
                     <div class="card-body">
-                        <form action="submit.php" method="post" enctype="multipart/form-data" novalidate>
+                        <form action="" method="post" enctype="multipart/form-data" novalidate>
                             <div class="form-group fw-semibold mb-4">
                                 <label for="pseudo">Nom :</label>
                                 <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Choisissez un pseudo..." required>
@@ -50,9 +68,11 @@ $currentMode = isset($_POST['mode']) ? $_POST['mode'] : 'light';
 
                             <div class="form-group fw-semibold mb-4">
                                 <label for="icon">Choisissez une icône :</label>
-                                <div id="icon-options">
+                                <div id="icon-options" class="d-flex justify-content-around flex-wrap">
                                     <?php foreach ($icons as $icon) : ?>
-                                        <img src=" /public/assets/img/iconeUtilisateur/<?= $icon; ?>" alt="<?= $icon; ?>" class="icon-option <?php if ($icon == $currentIcon) echo 'selected'; ?>" data-icon="<?= $icon; ?>" width="50">
+                                        <div class="iconContenair">
+                                            <img src="public/assets/img/iconeUtilisateur/<?= $icon; ?>" alt="<?= $icon; ?>" class="icon-option <?php if ($icon == $currentIcon) echo 'selected'; ?>" data-icon="<?= $icon; ?>" width="50">
+                                        </div>
                                     <?php endforeach; ?>
                                 </div>
                                 <input type="hidden" name="icon" id="selected-icon" value="<?= $currentIcon; ?>">
@@ -60,28 +80,23 @@ $currentMode = isset($_POST['mode']) ? $_POST['mode'] : 'light';
 
                             <div class="form-group fw-semibold mb-4">
                                 <label>Choisissez le mode du site :</label>
-                                <div class="d-flex justify-content-around">
-                                    <label class="btn btn-outline-dark mode-label">
-                                        <input type="radio" name="mode" value="dark" id="dark-mode" required>
-                                        <span>🌙 DARK MODE</span>
-                                    </label>
-                                    <label class="btn btn-outline-light mode-label">
-                                        <input type="radio" name="mode" value="light" id="light-mode">
-                                        <span>🌞 LIGHT MODE</span>
-                                    </label>
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <span class="mode-label">Light Mode</span>
+                                    <input type="checkbox" id="switch" name="mode" <?= $currentMode == 'dark' ? 'checked' : ''; ?>>
+                                    <label for="switch" class="toggle-label">Toggle</label>
+                                    <span class="mode-label">Dark Mode</span>
                                 </div>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-warning btn-block fw-bold">Enregistrer</button>
                             </div>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="public/assets/js/form.js"></script>
+    <script src="public/assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

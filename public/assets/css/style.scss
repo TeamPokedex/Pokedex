@@ -1,4 +1,9 @@
 $red : #D93611;
+$bg-light-color : #f5f5f5;
+$bg-dark-color : #343232;
+$blue-dark: #1C2B59;
+$yellow: #FFBD07;
+$blue-light: #2a5e8c;
 
 @font-face {
     font-family: "pokemonFont";
@@ -10,75 +15,118 @@ $red : #D93611;
     src: url(/public/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf);
 }
 
-h1 {
-    color: #2a5e8c;
-    font-family: "pokemonFont";
+// Image Titre
+.title-image {
+    width: 100%;
+    /* Taille par défaut, occupe toute la largeur du conteneur */
+    max-width: 200px;
+    /* Limite maximale pour les grands écrans */
+}
+
+@media (min-width: 768px) {
+    .title-image {
+        max-width: 300px;
+        /* Augmente la taille de l'image pour les écrans moyens et grands */
+    }
+}
+
+// Dark et light mode
+html,
+body {
+    --lightBtn: #1C2B59;
+    --lightBg: #F5F5F5;
+    --lightColor: #2a5e8c;
+    --darkBtn: #FFBD07;
+    --darkBg: #343232;
+    --darkColor: #F5F5F5;
+}
+
+html[data-theme='dark'],
+html[data-theme='dark'] body {
+    background: var(--darkBg);
+    --lightBtn: var(--darkBtn);
+    --lightBg: var(--darkBg);
+    --lightColor: var(--darkColor);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
+    transition-delay: 0 !important;
 }
 
 body {
-    background-color: #f5f5f5;
     font-family: "openSansFont";
 }
 
-header {
-    background-color: $red;
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
 }
 
-main {
-    div {
-        img {
-            width: 100%;
-            max-width: 500px;
-        }
-    }
-}
-
-form {
-    width: 70%;
-    max-width: 500px;
-
-    input {
-        border: 3px 0 3px 3px solid grey !important;
-
-        &:focus {
-            outline: none !important;
-            box-shadow: none !important;
-        }
-    }
-}
-
-.btn-pokemon {
-    background-color: #D93611;
-    color: white;
-
-    &:hover {
-        background-color: #D93611;
-        color: white;
-    }
-}
-
-.card-type {
+.toggle-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 55px;
+    height: 30px;
+    background: $yellow;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    width: 20%;
-
-    a {
-        text-decoration: none;
-        font-size: .8em;
-        width: 100%;
-    }
-
-    img {
-        max-width: 70px;
-    }
+    align-items: center;
+    border-radius: 100px;
+    position: relative;
 }
 
-// Bouton
-.btn {}
+.toggle-label:after {
+    content: '';
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+}
 
-// ICONE UTILISATEUR
+input:checked+.toggle-label {
+    background: $blue-dark;
+}
+
+input:checked+.toggle-label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.mode-label {
+    margin: 0 40px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.bg-dark {
+    background-color: var(--darkBg) !important;
+}
+
+.text-white {
+    color: var(--darkColor) !important;
+}
+
+// Icone utilisateur
 .icon-option {
     cursor: pointer;
     border: 2px solid transparent;
@@ -87,122 +135,22 @@ form {
 }
 
 .icon-option:hover {
-    border-color: #d93611;
+    border-color: $yellow;
 }
 
 .icon-option.selected {
-    border-color: #f39c12;
+    border-color: $red;
 }
 
 #icon-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    justify-content: space-around;
+    row-gap: 10px;
 }
 
-.btn-outline-dark,
-.btn-outline-light {
+.iconContenair {
+    width: calc(100% / 4);
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 48%;
 }
-
-.btn-outline-dark input[type="radio"],
-.btn-outline-light input[type="radio"] {
-    display: none;
-}
-
-.btn-outline-dark input[type="radio"]:checked+span,
-.btn-outline-light input[type="radio"]:checked+span {
-    font-weight: bold;
-}
-
-// // DarkMode
-// @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,900&display=swap');
-
-// html {
-//     width: 100%;
-//     height: 100vh;
-
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     background: var(--lightBg);
-
-//     --lightBtn: #FE016C;
-//     --lightBg: #fff;
-//     --lightColor: #232323;
-// }
-
-// html[data-theme='dark'] {
-//     background: var(--lightBg);
-//     --lightBtn: #FFBD07;
-//     --lightBg: #232323;
-//     --lightColor: #fff;
-// }
-
-// h1 {
-//     font-family: 'Poppins', sans-serif;
-//     font-weight: 300;
-//     color: var(--lightColor);
-// }
-
-// input[type=checkbox] {
-//     height: 0;
-//     width: 0;
-//     visibility: hidden;
-// }
-
-// label {
-//     cursor: pointer;
-//     text-indent: -9999px;
-//     width: 55px;
-//     height: 30px;
-//     background: var(--lightBtn);
-//     margin: 0 auto;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     -webkit-border-radius: 100px;
-//     -moz-border-radius: 100px;
-//     border-radius: 100px;
-//     position: relative;
-// }
-
-// label:after {
-//     content: '';
-//     background: #fff;
-//     width: 20px;
-//     height: 20px;
-//     -webkit-border-radius: 50%;
-//     -moz-border-radius: 50%;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 5px;
-//     left: 4px;
-//     transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
-// }
-
-// input:checked+label {
-//     background: #FFBD07;
-// }
-
-// input:checked+label:after {
-//     left: calc(100% - 5px);
-//     -webkit-transform: translateX(-100%);
-//     -moz-transform: translateX(-100%);
-//     -ms-transform: translateX(-100%);
-//     -o-transform: translateX(-100%);
-//     transform: translateX(-100%);
-// }
-
-// html.transition,
-// html.transition *,
-// html.transition *:before,
-// html.transition *:after {
-//     transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
-//     transition-delay: 0 !important;
-// }

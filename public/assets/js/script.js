@@ -1,4 +1,5 @@
-// icone utilisateur
+
+// Icone utilisateur
 document.addEventListener('DOMContentLoaded', function () {
     const iconOptions = document.querySelectorAll('.icon-option');
     iconOptions.forEach(icon => {
@@ -8,23 +9,30 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('selected-icon').value = this.getAttribute('data-icon');
         });
     });
-});
 
-// théme DARK LIGHT
-const darkModeInput = document.getElementById('dark-mode');
-const lightModeInput = document.getElementById('light-mode');
-const body = document.getElementById('body');
+    // Thème DARK LIGHT
+    var checkbox = document.querySelector('input[name=mode]');
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            trans();
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            trans();
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    });
 
-darkModeInput.addEventListener('change', function () {
-    if (darkModeInput.checked) {
-        body.classList.remove('bg-light');
-        body.classList.add('bg-dark', 'text-white');
-    }
-});
+    let trans = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+            document.documentElement.classList.remove('transition');
+        }, 1000);
+    };
 
-lightModeInput.addEventListener('change', function () {
-    if (lightModeInput.checked) {
-        body.classList.remove('bg-dark', 'text-white');
-        body.classList.add('bg-light');
+    // Initialisation du mode thème selon la valeur actuelle
+    if (checkbox.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
     }
 });
