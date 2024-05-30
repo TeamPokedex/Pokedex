@@ -99,10 +99,10 @@ switch (!empty($_GET['type'])) {
         <div class="d-flex flex-wrap justify-content-center mx-0 mx-xl-5 my-5">
             <p class="w-100 text-center mt-5 mb-5 fs-4">Classe la liste les Pokémon par type :</p><br>
             <?php foreach ($pokemonsType as $pokemonType): ?>
-                <div class="text-center card-type mb-3 d-flex">
+                <div class="text-center card-type mb-3 d-flex flex-wrap">
                     <button class="btn border">
-                        <img class="w-50" src='<?= $pokemonType->image ?>'>
-                        <a href='<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
+                        <img class="w-75" src='<?= $pokemonType->image ?>'>
+                        <a class="fs-5"href='<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
                     </button>
                 </div>
             <?php endforeach; ?>
@@ -117,15 +117,6 @@ switch (!empty($_GET['type'])) {
         </div>
 
     </main>
-
-    <div class="d-flex flex-wrap justify-content-around">
-        <?php foreach ($pokemonsType as $pokemonType) : ?>
-            <div class="text-center card-type">
-                <img src='<?= $pokemonType->image ?>'>
-                <a href='<?= $pokemonType->name ?>'><?= $pokemonType->name ?></a>
-            </div>
-        <?php endforeach; ?>
-    </div>
 
     <?php require_once 'partials/footer.php'; ?>
 

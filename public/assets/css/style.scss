@@ -34,7 +34,7 @@ main {
 
 .mobile-nav-menu {
     background-color: $red;
-    margin-top: 16em !important;
+    margin-top: 13em !important;
     width: 100%;
     text-align: center;
     ul {
@@ -74,7 +74,8 @@ form {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    width: 9%;
+    width: 5%;
+    min-width: 180px;
     a {
         text-decoration: none;
         font-size: .8em;
