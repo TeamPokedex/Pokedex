@@ -133,3 +133,4 @@ switch (!empty($_GET['type'])) {
 </body>
 
 </html>
+require('./controllers/typeListController.php');

@@ -12,3 +12,8 @@
     </div>
     <div class="open-sans-light text-center col-12">Copyright - PokeWorld 2024</div>
 </footer>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/assets/js/script.js"></script>
+    </body>
+
+    </html>
