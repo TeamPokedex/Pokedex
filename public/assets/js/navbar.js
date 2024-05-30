@@ -29,7 +29,7 @@ const searchByPokemonName = async (name) => {
         const req = await fetch("https://pokebuildapi.fr/api/v1/pokemon/" + name);
         if(req.status === 200){
             const pokemon = await req.json();
-            window.location.href = "http://localhost:8080/pokemon/" + pokemon.id
+            window.location.href = "http://localhost:8080?id=" + pokemon.id
         }
     } catch (e) {
         console.log(e);

@@ -1,10 +1,50 @@
 <?php
+require(__DIR__ . '/models/Cookie.php');
 
-    if(!empty($_GET['type'])){
-        require('controllers/pokemonListController.php');
-    }else{
-        require('controllers/homeController.php');
+$favorites = getCookieArray("favorites");
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['favorite_id']) && !empty($_POST['favorite_id'])) {
+        $receivedFavoriteId = htmlspecialchars($_POST['favorite_id']);
+
+        // Si l'id existe déjà dans le tableau alors ça sous entend qu'on souhaite le retirer
+        if (in_array((int)$receivedFavoriteId, $favorites)) {
+            // Supprime du tableau des favoris
+            $favorites = array_diff($favorites, array($receivedFavoriteId));
+            $favorites = array_values($favorites);
+        } else {
+            // Ajoute dans le tableau des favoris
+            $favorites[] = (int)$receivedFavoriteId;
+        }
+        storeArrayInCookie("favorites", array_unique($favorites));
     }
+}
+
+if (!empty($_GET['type'])) {
+    require('controllers/pokemonListController.php');
+} else if(!empty($_GET['id'])) {
+    require('controllers/pokemonDetailsController.php');
+} else {
+    require('controllers/homeController.php');
+}
+
+
+// var_dump($_SERVER['REQUEST_URI']);
+
+// var_dump($_GET['type']);
+// var_dump($_GET);
+// var_dump($_SERVER['HTTP_HOST']);
+   
+
+    // var_dump($_GET);
+
+    // switch (!empty($_GET)) {
+    //     case "param":
+    //         require("controllers/paramController.php");
+    //         break;
+    //     default:
+    //         require("controllers/homeController.php");
+    //         break;
+    // }
 
 // Liste des icônes disponibles
 /* $icons = [
