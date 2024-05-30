@@ -1,5 +1,22 @@
+@font-face {
+  font-family: "pokemonFont";
+  src: url(/public/assets/fonts/pokemonsolid.ttf);
+}
+
+@font-face {
+  font-family: "openSansFont";
+  src: url(/public/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf);
+}
+
+h1 {
+  color: #2a5e8c;
+  font-family: "pokemonFont";
+}
+
 body {
   background-color: #f5f5f5;
+  font-family: "openSansFont";
+  color: #1c2b59;
 }
 
 header {
@@ -15,9 +32,11 @@ form {
   width: 70%;
   max-width: 500px;
 }
+
 form input {
   border: 3px 0 3px 3px solid grey !important;
 }
+
 form input:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -27,6 +46,7 @@ form input:focus {
   background-color: #D93611;
   color: white;
 }
+
 .btn-pokemon:hover {
   background-color: #D93611;
   color: white;
@@ -39,13 +59,55 @@ form input:focus {
   text-align: center;
   width: 20%;
 }
+
 .card-type a {
   text-decoration: none;
   font-size: 0.8em;
   width: 100%;
 }
+
 .card-type img {
   max-width: 70px;
+}
+
+.icon-option {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.icon-option:hover {
+  border-color: #d93611;
+}
+
+.icon-option.selected {
+  border-color: #f39c12;
+}
+
+#icon-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-outline-dark,
+.btn-outline-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48%;
+}
+
+.btn-outline-dark input[type=radio],
+.btn-outline-light input[type=radio] {
+  display: none;
+}
+
+.btn-outline-dark input[type=radio]:checked+span,
+.btn-outline-light input[type=radio]:checked+span {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
