@@ -15,7 +15,7 @@
     <title>POKEDEX</title>
 </head>
 
-<body>
+<body data-theme="<?= $currentMode ?>">
     <header>
         <nav class="d-xl-none d-flex justify-content-around align-items-center py-3">
             <div class="text-start w-50 mx-3">
