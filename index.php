@@ -66,7 +66,7 @@ switch (!empty($_GET['type'])) {
             </div>
             
             <p class="position-relative w-25">
-                <input type="text" placeholder="rechercher un pokemon via son NOM ou ID" class="form-control">
+                <input type="text" placeholder="ex : pikachu" class="form-control">
                     <a href="https://www.google.com" class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2"></a>
                 </input>
             </p>
@@ -102,7 +102,7 @@ switch (!empty($_GET['type'])) {
             </div>
         </form>
 
-        <div class="d-flex flex-wrap justify-content-center mx-0 mx-xl-5 my-5">
+        <div class="d-flex flex-wrap justify-content-center mx-0 mx-xl-5 my-5 container-list-pokemon">
             <p class="w-100 text-center mt-5 mb-5 fs-5">Classe la liste les Pokémon par type :</p><br>
             <?php foreach ($pokemonsType as $pokemonType): ?>
                 <div class="text-center card-type mb-3 d-flex flex-wrap">
@@ -114,16 +114,14 @@ switch (!empty($_GET['type'])) {
             <?php endforeach; ?>
         </div>
 
-        <div class="d-none d-xl-flex justify-content-end">
-            <div class="d-flex mx-auto">
-                <div class="pokeball">
-                    <img src="public/assets/img/pokeball.png" alt="">
-                </div>
-                
-                <div class="">
-                    <img src="public/assets/img/sacha.webp" alt="">
-                </div>
+        <div class="d-none d-xl-flex my-5">
+            <div class="container-pokeball text-center w-50">
+                <img src="public/assets/img/pokeball.png" alt="" class="img-pokeball">
             </div>
+            
+            <p class="container-sacha text-end w-50 pe-5">
+                <img src="public/assets/img/sacha.webp" alt="">
+            </p>
         </div>
 
     </main>
