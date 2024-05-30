@@ -64,8 +64,11 @@ switch (!empty($_GET['type'])) {
             <div class="menu-image py-1">
                 <img src="public/assets/img/logoPokeworld.png" alt="">
             </div>
-            <input type="text" placeholder="rechercher un pokemon via son NOM ou ID" class="form-control w-25">
-            <p class="text-light fw-bold">ACCUEIL</p>
+            <div>
+                <input type="text" placeholder="rechercher un pokemon via son NOM ou ID" class="form-control w-25 position-relative">
+                <i class="fa-solid fa-search position-absolute"></i>
+            </div>
+                <p class="text-light fw-bold">ACCUEIL</p>
             <p class="text-light fw-bold">POKEDEX</p>
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center">
@@ -97,7 +100,7 @@ switch (!empty($_GET['type'])) {
         </form>
 
         <div class="d-flex flex-wrap justify-content-center mx-0 mx-xl-5 my-5">
-            <p class="w-100 text-center mt-5 mb-5 fs-4">Classe la liste les Pokémon par type :</p><br>
+            <p class="w-100 text-center mt-5 mb-5 fs-5">Classe la liste les Pokémon par type :</p><br>
             <?php foreach ($pokemonsType as $pokemonType): ?>
                 <div class="text-center card-type mb-3 d-flex flex-wrap">
                     <button class="btn border">
@@ -108,12 +111,16 @@ switch (!empty($_GET['type'])) {
             <?php endforeach; ?>
         </div>
 
-        <div class="position-absolute end-50 pokeball">
-            <img src="public/assets/img/pokeball.png" alt="">
-        </div>
-        
-        <div class="position-absolute end-0">
-            <img src="public/assets/img/sacha.webp" alt="">
+        <div class="d-none d-xl-flex justify-content-end">
+            <div class="d-flex mx-auto">
+                <div class="pokeball">
+                    <img src="public/assets/img/pokeball.png" alt="">
+                </div>
+                
+                <div class="">
+                    <img src="public/assets/img/sacha.webp" alt="">
+                </div>
+            </div>
         </div>
 
     </main>

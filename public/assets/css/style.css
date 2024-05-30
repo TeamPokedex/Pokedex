@@ -2,6 +2,12 @@ body {
   background-color: #f5f5f5;
 }
 
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   background-color: #D93611;
 }
@@ -11,9 +17,10 @@ header nav p {
 
 main div img {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
 }
 main .pokeball {
+  width: 300px;
   transform: translateX(50%);
 }
 
@@ -77,6 +84,11 @@ form input:focus {
 }
 .card-type img {
   max-width: 50px;
+}
+
+footer {
+  background-color: #D93611;
+  min-height: 20vh;
 }
 
 /*# sourceMappingURL=style.css.map */
