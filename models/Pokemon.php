@@ -9,7 +9,7 @@ function getAllPokemonByType($type) {
 }
 
 function getPokemonById($id) {
-    $url = 'https://pokebuildapi.fr/api/v1/pokemon';
+    $url = 'https://pokebuildapi.fr/api/v1/pokemon/';
     $url = $url . $id;
     $pokemonList = file_get_contents($url);
     $result = json_decode($pokemonList);
