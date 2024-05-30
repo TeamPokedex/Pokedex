@@ -118,8 +118,6 @@ switch (!empty($_GET['type'])) {
 
     </main>
 
-<<<<<<< HEAD
-=======
     <div class="d-flex flex-wrap justify-content-around">
         <?php foreach ($pokemonsType as $pokemonType) : ?>
             <div class="text-center card-type">
@@ -128,7 +126,6 @@ switch (!empty($_GET['type'])) {
             </div>
         <?php endforeach; ?>
     </div>
->>>>>>> 8a1eef28b610d7e8adfb3b9a491ca980647e33d8
 
     <?php require_once 'partials/footer.php'; ?>
 
