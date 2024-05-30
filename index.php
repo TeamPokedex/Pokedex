@@ -21,6 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (!empty($_GET['type'])) {
     require('controllers/pokemonListController.php');
+} else if(!empty($_GET['id'])) {
+    require('controllers/pokemonDetailsController.php');
 } else {
     require('controllers/homeController.php');
 }

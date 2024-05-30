@@ -32,9 +32,10 @@ $typeColors = [
                 <!-- pokemon image -->
                 <div class="card ml-5" style="width: 100%;">
                     <img class="card-img-top img-fluid" src="<?= htmlspecialchars($pokemon->image) ?>" title="<?= htmlspecialchars($pokemon->name) ?>" />
-                    <button class="btn btn-favoris" onclick="toggleFavoris(this)" style="position: absolute; top: 10px; right: 10px; background: none; border: none;">
-                        <i class="fas fa-heart"></i>
-                    </button>
+                    <form action=".?id=<?= $pokemon->id ?>" method="POST">
+                        <input type="hidden" name="favorite_id" value="<?= $pokemon->id ?>" />
+                        <button type="submit" class="btn position-absolute" style="top: 5px; right: 5px;"><i class="fa-solid fa-heart favorite-icon <?= (in_array((int)$pokemon->id, $favorites)) ? "enabled-favorite-icon" : "disabled-favorite-icon" ?>"></i></button>
+                    </form>
                 </div>
                 <!-- end pokemon image -->
             </div>
