@@ -83,7 +83,6 @@ form input:focus {
 .footer {
   background-color: #D93611;
   width: 100%;
-  height: 20%;
   color: #F5F5F5;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -105,4 +104,9 @@ form input:focus {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   font-size: 12px;
+}
+
+.font404 {
+  color: #D93611;
+  font-size: 44px;
 }
