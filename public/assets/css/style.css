@@ -3,7 +3,17 @@
     width: 32px;
 }
 
-#pokemon-details-name{
+#pokemon-details-name {
     margin-top: 10px;
     margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.stats-details {
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
