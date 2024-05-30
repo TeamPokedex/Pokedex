@@ -56,8 +56,8 @@
                 </input>
             </p>
 
-            <p class="text-light fw-bold">ACCUEIL</p>
-            <p class="text-light fw-bold">POKEDEX</p>
+            <a href="/" class="text-light fw-bold">ACCUEIL</a>
+            <a href="" class="text-light fw-bold">POKEDEX</a>
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center">
                     <i class="fa-solid fa-heart fs-2"></i>

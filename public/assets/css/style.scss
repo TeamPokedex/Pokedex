@@ -134,13 +134,12 @@ footer {
 
 @keyframes pokeballEffect {
     0% {
-        transform: rotate(0);
-        zoom: 10%;
-        margin-top: -1000px;
-        margin-left: -20000px;
+        transform: rotate(0) scale(1);
+        margin-top: -1200px;
+        margin-left: 20000px;
     }
     100%{
-        transform: rotate(1344550deg);
+        transform: rotate(155550deg) scale(2);
         margin-left: 0;
         margin-top: 0;
         zoom: 100%;
