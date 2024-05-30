@@ -6,7 +6,7 @@ $urlTypes = 'https://pokebuildapi.fr/api/v1/types';
 $pokemonsType = file_get_contents($urlTypes);
 $pokemonsType = json_decode($pokemonsType);
 
-switch (!empty($_GET['type'])) {
+switch (!empty($_GET)) {
     case "":
         break;
     case "":
@@ -23,7 +23,6 @@ $icons = [
     "IconRondoudou.png",
     "IconRoucoul.png",
     "IconSalameche.png"
-
 ];
 
 // Initialiser les variables
