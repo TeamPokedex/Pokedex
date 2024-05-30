@@ -1,2 +1,5 @@
 package*
 node_modules
+.htaccess
+compose.yaml
+.DS_STORE
