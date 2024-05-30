@@ -1,13 +1,25 @@
 <?php
 
-    switch (!empty($_GET)) {
-        case "param":
-            require("controllers/paramController.php");
-            break;
-        default:
-            require("controllers/homeController.php");
+    var_dump($_SERVER['REQUEST_URI']);
+    var_dump($_SERVER['HTTP_HOST']);
+
+
+    switch ($_SERVER['REQUEST_URI']) {
+        case '/':
+            require('controllers/homeController.php');
             break;
     }
+
+    // var_dump($_GET);
+
+    // switch (!empty($_GET)) {
+    //     case "param":
+    //         require("controllers/paramController.php");
+    //         break;
+    //     default:
+    //         require("controllers/homeController.php");
+    //         break;
+    // }
 
 // Liste des icônes disponibles
 /* $icons = [
