@@ -309,3 +309,45 @@ input:checked+.toggle-label:after {
     display: flex;
     justify-content: center;
 }
+
+/*# sourceMappingURL=style.css.map */
+.pokemon-type-logo {
+    height: 32px;
+    width: 32px;
+}
+
+#pokemon-details-name {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+
+/* Style for the progress bar background */
+.progress {
+    background-color: #e9ecef; /* Light grey color for the bar background */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    position: relative; /* Allow absolute positioning within */
+}
+
+/* Style for the progress bar fill */
+.progress-bar-custom {
+    background-color: yellow; /* Yellow color for the progress bar fill */
+    position: absolute; /* Absolute positioning within the progress bar */
+    height: 100%; /* Full height */
+    transition: width 0.6s ease; /* Smooth transition for width changes */
+}
+
+.btn-favoris .fa-heart {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.btn-favoris.active .fa-heart {
+    color: red;
+}
