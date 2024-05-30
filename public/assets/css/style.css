@@ -81,12 +81,13 @@ form input:focus {
 
 /*# sourceMappingURL=style.css.map */
 
-.footer {
+footer {
   background-color: #D93611;
-  width: 100%;
+  /* min-height: 20vh; */
   color: #F5F5F5;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
 }
 
 .open-sans-regular {
@@ -107,7 +108,12 @@ form input:focus {
   font-size: 12px;
 }
 
-.font404 {
+.fontError {
   color: #D93611;
-  font-size: 44px;
+  font-size: 72px;
+  font-weight: 800;
+}
+
+.pika {
+  max-width: 22%;
 }
