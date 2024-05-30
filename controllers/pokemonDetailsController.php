@@ -1,6 +1,7 @@
 <?php
 
 require(__DIR__ . '/../models/Pokemon.php');
+
 $pokemonId = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
 $pokemon = getPokemonById($pokemonId);
 

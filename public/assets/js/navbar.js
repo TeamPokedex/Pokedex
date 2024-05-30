@@ -61,7 +61,7 @@ menuIcon.addEventListener('click', () => {
 
 searchbarMenu.addEventListener('click', () => {
     if(types.includes(inputSearch.value)){
-
+        window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
     }else{
         searchByPokemonName(inputSearch.value);
     }
