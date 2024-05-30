@@ -23,13 +23,7 @@
             </div>
             <div class="w-50 d-flex justify-content-end text-center">
                 <div class="mx-3">
-                    <i class="fa-solid fa-heart fs-4"></i>
-                    <p class="m-0 fs-12 text-light">Favoris</p>
-                </div>
-                <div class="mx-3">
-                    <div class="iconContenair">
-                        <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon; ?>" alt="<?= $currentName; ?>" class="icon-option" width="50">
-                    </div>
+                    <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon; ?>" alt="<?= $currentName; ?>" class="icon-option" width="50">
                 </div>
             </div>
             <div class="d-xl-none d-none mobile-nav-menu position-absolute start-0">
