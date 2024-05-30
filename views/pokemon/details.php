@@ -60,7 +60,7 @@
                         <strong>Évolution précédente :</strong>
                         <?php foreach ($previousEvolution as $evolution) : ?>
                             <div class="evolution">
-                                <?= htmlspecialchars($evolution->name) ?> <div>ID: <?= htmlspecialchars($evolution->pokedexIdd) ?></div>
+                                <?= htmlspecialchars($evolution->name) ?> <div># <?= htmlspecialchars($evolution->pokedexIdd) ?></div>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -73,7 +73,7 @@
                         <strong>Évolution suivante :</strong>
                         <?php foreach ($nextEvolutions as $evolution) : ?>
                             <div class="evolution">
-                                <?= htmlspecialchars($evolution->name) ?><div>ID: <?= htmlspecialchars($evolution->pokedexId) ?></div>
+                                <?= htmlspecialchars($evolution->name) ?><div># <?= htmlspecialchars($evolution->pokedexId) ?></div>
                             </div>
                         <?php endforeach; ?>
                     </div>
