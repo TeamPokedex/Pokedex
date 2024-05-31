@@ -1,7 +1,7 @@
 <div class="text-center mt-4">
     <img src="./public/assets/img/title/parametres.png" alt="Parametres" class="title-image">
 </div>
-<div class="container">
+<div class="container mb-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card mt-5">
@@ -32,8 +32,8 @@
                                 <span class="mode-label">Dark Mode</span>
                             </div>
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-warning btn-block fw-bold">Enregistrer</button>
+                        <div class="text-center mb-3">
+                            <button type="submit" name="changeParam" class="btn btn-warning btn-block fw-bold">Enregistrer</button>
                         </div>
                     </form>
                 </div>
