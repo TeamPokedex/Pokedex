@@ -23,7 +23,7 @@
                 <i class="fa-solid fa-bars fs-2" id="icon-menu"></i>
             </div>
             <div class="w-50 d-flex justify-content-end text-center">
-                <div class="mx-3">
+                <div class="mx-3 d-flex flex-column justify-content-center">
                     <i class="fa-solid fa-heart fs-4 w-100"></i>
                     <a href="/?favorites" class="m-0 fs-12 text-light">Favoris</a>
                 </div>
@@ -71,27 +71,21 @@
             <a href="/" class="text-light fw-bold">ACCUEIL</a>
             <a href="/?pokedex" class="text-light fw-bold">POKEDEX</a>
             <div class="d-flex flex-wrap justify-content-end">
-                <div class="mx-3 text-center">
-                    <i class="fa-solid fa-heart fs-2 w-100"></i>
-                    <a href="/?favorites" class="m-0 fs-12 text-light">Favoris</a>
+                <div class="mx-3 text-center d-flex flex-column justify-content-center">
+                    <a href="/?favorites" class="m-0 fs-12 fw-bold text-light">FAVORIS</a>
                 </div>
-                <div class="d-flex flex-wrap justify-content-end">
+                <div class="mx-3 text-center">
                     <div class="mx-3 text-center">
-                        <div class="mx-3 text-center">
-                            <div id="profile">
-                                <div class="row">
-                                    <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option">
-                                </div>
-                                <div class="row">
-                                    <a href="/?param"><span class="pseudo fs-4 text-light"><?= $currentName ?? "Profil" ?></span></a>
-                                </div>
+                        <div id="profile">
+                            <div class="row">
+                                <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option">
+                            </div>
+                            <div class="row">
+                                <a href="/?param"><span class="pseudo fs-4 text-light"><?= $currentName ?? "Profil" ?></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
-            </div>
             </div>
         </nav>
     </header>

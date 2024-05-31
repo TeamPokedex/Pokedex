@@ -38,12 +38,11 @@ $typeColors = [
                         <div class="card-body">
                             <h5 class="card-title"><?= $pokemon->name ?></h5>
                             <p class="card-text">ID: <?= $pokemon->id ?></p>
-                            <p class="card-text">Type(s): <?php
-                                                            foreach ($pokemon->apiTypes as $pokemonType) { ?>
+                            <p class="card-text">Type(s):
+                                <?php foreach ($pokemon->apiTypes as $pokemonType) { ?>
                                     <img src="<?= $pokemonType->image ?>" name="<?= $pokemonType->name ?>" class="pokemon-type-logo" />
                                     <?= $pokemonType->name ?>
-                                <?php
-                                                            } ?>
+                                <?php } ?>
                             </p>
                         </div>
                         <div class="card-footer bg-red">
