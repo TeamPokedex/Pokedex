@@ -1,27 +1,4 @@
-<?php
-$typeColors = [
-    'eau' => 'blue',
-    'feu' => 'orange',
-    'plante' => 'green',
-    'electrik' => 'yellow',
-    'psy' => 'purple',
-    'glace' => 'lightblue',
-    'dragon' => 'red',
-    'tenebres' => 'black',
-    'fee' => 'pink',
-    'normal' => 'grey',
-    'combat' => 'red',
-    'vol' => 'blue',
-    'poison' => 'purple',
-    'sol' => 'brown',
-    'roche' => 'grey',
-    'insecte' => 'green',
-    'acier' => 'grey',
-    'spectre' => 'black',
-];
-?>
 <div class="container" id="list-container">
-    <!-- style="background-color:<?= $typeColors[$type] ?>" -->
     <div class="row">
         <h1 class="text-center fs-1 my-5"><?= $type ?? '' ?></h1>
         <?php
@@ -32,7 +9,7 @@ $typeColors = [
                     <div class="card" data-type="<?= $pokemon->type ?>">
                         <form action="" method="POST">
                             <input type="hidden" name="favorite_id" value="<?= $pokemon->id ?>" />
-                            <button type="submit" class="btn position-absolute" style="top: 5px; right: 5px;"><i class="fa-solid fs-1 fa-heart favorite-icon <?= (in_array((int)$pokemon->id, $favorites)) ? "enabled-favorite-icon" : "disabled-favorite-icon" ?>"></i></button>
+                            <button type="submit" class="btn position-absolute" style="top: 5px; right: 5px;"><i class="fa-solid fs-1 fa-heart favorite-icon"></i></button>
                         </form>
                         <img src="<?= $pokemon->image ?>" class="card-img-top" alt="<?= $pokemon->name ?>">
                         <div class="card-body">
