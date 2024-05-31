@@ -69,13 +69,28 @@ searchbarMenu.addEventListener('click', () => {
     }
 })
 
-btnPokemon.addEventListener('click', (e) => {
-    if (e.key === "Enter") {
+// inputSearch.addEventListener('click', () => {
+//      if(types.includes(inputSearch.value)){
+//         window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
+//     }else{
+//         searchByPokemonName(inputSearch.value);
+//     }
+// })
+inputSearch.addEventListener('keyup', (e) => {
+    if(e.key === "Enter"){
         if(types.includes(inputSearch.value)){
             window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
         }else{
             searchByPokemonName(inputSearch.value);
         }
+    }
+})
+
+btnPokemon.addEventListener('click', (e) => {
+    if(types.includes(inputSearch.value)){
+        window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
+    }else{
+        searchByPokemonName(inputSearch.value);
     }
 })
 

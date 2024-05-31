@@ -24,10 +24,10 @@ $typeColors = [
 
 <main class="d-flex align-content-center justify-content-around flex-wrap mb-5">
 
-
     <div class="name-pokemon d-flex justify-content-center my-4">
         <h1 class="mb-5" id='pokemon-details-name'><?= htmlspecialchars($pokemon->name) ?> # <?= htmlspecialchars($pokemon->id) ?></h1>
     </div>
+    
     <div class="d-flex">
         <div class="container-fluid">
             <div class="row">
