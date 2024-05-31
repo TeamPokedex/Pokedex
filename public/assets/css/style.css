@@ -38,6 +38,25 @@ header nav a {
   text-decoration: none;
 }
 
+.open-sans-regular {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 16px;
+}
+
+.open-sans-light {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 14px;
+}
+
+
 main {
   min-height: 70vh;
 }
@@ -131,7 +150,11 @@ p .search-bar-menu {
 
 footer {
   background-color: #D93611;
-  min-height: 20vh;
+  color: #F5F5F5;
+
+}
+.spaceElementsFooter {
+  min-height: 5vh;
 }
 
 @keyframes pokeballEffect {
