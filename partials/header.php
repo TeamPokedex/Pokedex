@@ -61,7 +61,7 @@
         <nav class="d-none d-xl-flex justify-content-between align-items-center">
 
             <div class="menu-image py-1">
-                <img src="/public/assets/img/logoPokeworld.png" alt="">
+                <a href="/?index"><img src="/public/assets/img/logoPokeworld.png" alt=""></a> 
             </div>
 
             <div class="position-relative">
