@@ -45,6 +45,8 @@ if (isset($_GET['pokedex']) || !empty($_GET['type'])) {
     require('controllers/paramController.php');
 } else if (isset($_GET["favorites"])) {
     require('controllers/favourListController.php');
+    // } else if (empty($_GET['id'])) {
+    //     require('./404.php');
 } else {
     require('controllers/homeController.php');
 }

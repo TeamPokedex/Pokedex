@@ -50,13 +50,14 @@
 
             <p class="position-relative w-25">
                 <input type="text" placeholder="ex : pikachu" class="form-control input-search">
-                <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2"></a>
+                <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2" href="/"></a>
                 </input>
             </p>
 
             <a href="/" class="text-light fw-bold">ACCUEIL</a>
             <a href="/?pokedex" class="text-light fw-bold">POKEDEX</a>
             <a href="/?favorites" class="text-light fw-bold">FAVORIS</a>
+            <a href="/?param" class="text-light fw-bold">PARAMETRES</a>
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center">
                     <div id="profile">
