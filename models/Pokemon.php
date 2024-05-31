@@ -22,3 +22,20 @@ function getAllPokemonTypes(){
     $result = json_decode($pokemonList);
     return $result;
 }
+
+function getAllPokemon() {
+    $url = 'https://pokebuildapi.fr/api/v1/pokemon';
+    $pokemonList = file_get_contents($url);
+    $result = json_decode($pokemonList);
+    return $result;
+}
+
+function getPokemonByIds($ids) {
+    $pokemons = [];
+
+    foreach ($ids as $id) {
+        $pokemons[] = getPokemonById($id);
+    }
+
+    return $pokemons;
+}
