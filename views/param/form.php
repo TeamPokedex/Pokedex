@@ -1,17 +1,16 @@
-<div class="text-center">
+<div class="text-center mt-4">
     <img src="./public/assets/img/title/parametres.png" alt="Parametres" class="title-image">
 </div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card mt-5">
-                <div class="card-body">
+                <div class="card-body d-flex justify-content-center">
                     <form action="" method="post" enctype="multipart/form-data" novalidate>
                         <div class="form-group fw-semibold mb-4">
                             <label for="pseudo">Nom :</label>
                             <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Choisissez un pseudo..." value="<?= $currentName ?>" required>
                         </div>
-
                         <div class="form-group fw-semibold mb-4">
                             <label for="icon">Choisissez une icône :</label>
                             <div id="icon-options" class="d-flex justify-content-around flex-wrap">
