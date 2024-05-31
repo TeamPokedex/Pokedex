@@ -1,8 +1,8 @@
 const menuIcon = document.getElementById('icon-menu');
 const navbarMenu = document.getElementsByClassName('mobile-nav-menu')[0];
-const searchbarMenu = document.getElementsByClassName("search-bar-menu")[0];
 const inputSearch = document.getElementsByClassName("input-search")[0];
-const btnPokemon = document.getElementsByClassName("btn-pokemon")[0];
+const inputSearch2 = document.getElementsByClassName("input-search")[1];
+const inputSearch3 = document.getElementsByClassName("input-search-home")[0];
 
 const types = [
 'eau',
@@ -61,22 +61,7 @@ menuIcon.addEventListener('click', () => {
     }
 })
 
-searchbarMenu.addEventListener('click', () => {
-    if(types.includes(inputSearch.value)){
-        window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
-    }else{
-        searchByPokemonName(inputSearch.value);
-    }
-})
-
-// inputSearch.addEventListener('click', () => {
-//      if(types.includes(inputSearch.value)){
-//         window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
-//     }else{
-//         searchByPokemonName(inputSearch.value);
-//     }
-// })
-inputSearch.addEventListener('keyup', (e) => {
+inputSearch.addEventListener("keyup", (e) => {
     if(e.key === "Enter"){
         if(types.includes(inputSearch.value)){
             window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
@@ -85,12 +70,23 @@ inputSearch.addEventListener('keyup', (e) => {
         }
     }
 })
+inputSearch2.addEventListener("keyup", (e) => {
+    if(e.key === "Enter"){
+        if(types.includes(inputSearch2.value)){
+            window.location.href = "http://localhost:8080/?type=" + inputSearch2.value;
+        }else{
+            searchByPokemonName(inputSearch2.value);
+        }
+    }
+})
 
-btnPokemon.addEventListener('click', (e) => {
-    if(types.includes(inputSearch.value)){
-        window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
-    }else{
-        searchByPokemonName(inputSearch.value);
+inputSearch3.addEventListener("keyup", (e) => {
+    if(e.key === "Enter"){
+        if(types.includes(inputSearch.value)){
+            window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
+        }else{
+            searchByPokemonName(inputSearch.value);
+        }
     }
 })
 

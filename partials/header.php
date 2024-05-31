@@ -66,11 +66,10 @@
                 <img src="/public/assets/img/logoPokeworld.png" alt="">
             </div>
 
-            <p class="position-relative w-25">
+            <div class="position-relative">
                 <input type="text" placeholder="ex : pikachu" class="form-control input-search">
-                    <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search fa-search-md me-2"></a>
-                </input>
-            </p>
+                <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search me-2 ps-2"></a>
+            </div>
 
             <a href="/" class="text-light fw-bold">ACCUEIL</a>
             <a href="/?pokedex" class="text-light fw-bold">POKEDEX</a>
