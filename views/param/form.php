@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-warning btn-block fw-bold">Enregistrer</button>
+                            <button type="submit" name="changeParam" class="btn btn-warning btn-block fw-bold">Enregistrer</button>
                         </div>
                     </form>
                 </div>

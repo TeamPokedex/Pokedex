@@ -2,6 +2,7 @@ const menuIcon = document.getElementById('icon-menu');
 const navbarMenu = document.getElementsByClassName('mobile-nav-menu')[0];
 const searchbarMenu = document.getElementsByClassName("search-bar-menu")[0];
 const inputSearch = document.getElementsByClassName("input-search")[0];
+const btnPokemon = document.getElementsByClassName("btn-pokemon")[0];
 
 const types = [
 'eau',
@@ -65,6 +66,16 @@ searchbarMenu.addEventListener('click', () => {
         window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
     }else{
         searchByPokemonName(inputSearch.value);
+    }
+})
+
+btnPokemon.addEventListener('click', (e) => {
+    if (e.key === "Enter") {
+        if(types.includes(inputSearch.value)){
+            window.location.href = "http://localhost:8080/?type=" + inputSearch.value;
+        }else{
+            searchByPokemonName(inputSearch.value);
+        }
     }
 })
 

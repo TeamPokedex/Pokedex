@@ -10,10 +10,12 @@ function getCookie($name)
 
 function saveCookie($name, $value)
 {
+
+
     setcookie($name, $value, time() + (30 * 24 * 60 * 60), "/");
 }
 
-function deleteCookie($name) 
+function deleteCookie($name)
 {
     setcookie($name, '', time() - 3600, '/');
 }
