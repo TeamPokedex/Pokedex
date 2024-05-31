@@ -1,7 +1,7 @@
 <?php require_once 'partials/header.php'; ?>
 
 
-    <main class="vh-100">
+    <main>
         <div class="text-center mt-5">
             <img class="pika" src="./public/assets/img/pika404.png" alt="Page non trouvée - ERREUR 404">
             <div class="fontError">
