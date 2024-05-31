@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="<?= $currentMode ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <title>POKEDEX</title>
 </head>
 
-<body data-theme="<?= $currentMode ?>">
+<body>
     <header>
         <nav class="d-xl-none d-flex justify-content-around align-items-center py-3">
             <div class="text-start w-50 mx-3">
@@ -58,7 +58,7 @@
 
             <p class="position-relative w-25">
                 <input type="text" placeholder="ex : pikachu" class="form-control input-search">
-                    <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search fa-search-md me-2"></a>
+                <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search fa-search-md me-2"></a>
                 </input>
             </p>
 
