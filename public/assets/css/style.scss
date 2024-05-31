@@ -91,6 +91,7 @@ main {
 
 .menu-image {
     width: 28%;
+
     img {
         width: 100%;
         max-width: 450px;
@@ -165,12 +166,11 @@ p {
     }
 }
 
+// FOOTER 
 footer {
     background-color: $red;
     min-height: 20vh;
 }
-
-
 
 @keyframes pokeballEffect {
     0% {

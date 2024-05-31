@@ -29,7 +29,7 @@
                 </div>
                 <div id="profile">
                     <div class="row">
-                        <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option">
+                        <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option" width="50">
                     </div>
                     <div class="row">
                         <a href="/?param"><span class="pseudo fs-5 text-light"><?= $currentName ?? "PROFIL" ?></span></a>
