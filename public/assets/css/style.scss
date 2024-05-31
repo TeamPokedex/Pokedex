@@ -9,6 +9,17 @@ body {
 
 .fa-search {
     cursor: pointer;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+}
+
+.fa-search-md {
+    top: 100%;
+}
+
+#icon-menu {
+    cursor: pointer;
 }
 
 .bg-red {
@@ -87,7 +98,7 @@ main {
 
 .mobile-nav-menu {
     background-color: $red;
-    margin-top: 13em !important;
+    margin-top: 16.5em !important;
     width: 100%;
     text-align: center;
 
