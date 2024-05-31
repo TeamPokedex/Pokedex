@@ -38,7 +38,6 @@ const searchByPokemonName = async (name) => {
     }
 }
 
-
 menuIcon.addEventListener('click', () => {
     if(menuIcon.classList.contains('fa-bars')){
 

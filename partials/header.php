@@ -23,16 +23,12 @@
             </div>
             <div class="w-50 d-flex justify-content-end text-center">
                 <div class="mx-3">
-<<<<<<< HEAD
                     <i class="fa-solid fa-heart fs-4 w-100"></i>
                     <a href="" class="m-0 fs-12 text-light">Favoris</a>
                 </div>
                 <div class="mx-3">
                     <i class="fa-solid fa-user fs-4 w-100"></i>
                     <a href="" class="m-0 fs-12 text-light">Profil</a>
-=======
-                    <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon; ?>" alt="<?= $currentName; ?>" class="icon-option" width="50">
->>>>>>> 3107d33c6877287be62beb1f9e19031b8fa0397a
                 </div>
             </div>
             <div class="d-xl-none d-none mobile-nav-menu position-absolute start-0">
@@ -40,16 +36,8 @@
                     <li class="mb-3">
                         <a class="text-light my-5" href="/">Accueil</a>
                     </li>
-<<<<<<< HEAD
                     <li class="mb-3">
                         <a class="text-light my-5" href="">Pokédex</a>
-=======
-                    <li class="mb-3 text-light">
-                        <a href="/?pokedex">Pokédex</a>
-                    </li>
-                    <li class="mb-3 text-light">
-                        <a href="/?favorites">Favoris</a>
->>>>>>> 3107d33c6877287be62beb1f9e19031b8fa0397a
                     </li>
                     <li class="mb-3">
                         <a class="text-light my-5" href="/?param">Paramètres</a>
@@ -63,7 +51,7 @@
                 </ul>
             </div>
         </nav>
-        <nav class="d-none d-md-flex justify-content-between align-items-center">
+        <nav class="d-none d-xl-flex justify-content-between align-items-center">
             <div class="menu-image py-1">
                 <img src="/public/assets/img/logoPokeworld.png" alt="">
             </div>
@@ -79,23 +67,12 @@
             <a href="/?favorites" class="text-light fw-bold">FAVORIS</a>
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center">
-<<<<<<< HEAD
                     <i class="fa-solid fa-heart fs-2 w-100"></i>
                     <a href="" class="m-0 fs-12 text-light">Favoris</p>
                 </div>
                 <div class="mx-3 text-center">
                     <i class="fa-solid fa-heart fs-2 w-100"></i>
                     <a href="" class="m-0 fs-12 text-light">Profil</p>
-=======
-                    <div id="profile">
-                        <div class="row">
-                            <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option">
-                        </div>
-                        <div class="row">
-                            <span class="pseudo"><?= $currentName ?? "Profil" ?></span>
-                        </div>
-                    </div>
->>>>>>> 3107d33c6877287be62beb1f9e19031b8fa0397a
                 </div>
             </div>
         </nav>
