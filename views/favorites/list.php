@@ -1,3 +1,6 @@
+<div class="text-center mt-4">
+    <img src="./public/assets/img/title/favoris.png " alt="Favoris" class="title-image">
+</div>
 <div class="container" id="list-container">
     <div class="row">
         <h1 class="text-center fs-1 my-5"><?= $type ?? '' ?></h1>

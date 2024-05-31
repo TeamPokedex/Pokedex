@@ -12,6 +12,7 @@
     </div>
     <div class="spaceElementsFooter"></div>
     <div class="open-sans-light text-center col-12 pb-2">Copyright - PokeWorld 2024</div>
+
     <div id="back-to-top">
         <div class="screen"></div>
         <div class="buttons">
