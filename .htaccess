@@ -4,3 +4,6 @@ RewriteEngine On
 # Règle pour réécrire l'URL
 RewriteRule ^pokemon$ controllers/pokemonListController.php [QSA,L]
 RewriteRule ^pokemon/([0-9]+)$ controllers/pokemonDetailsController.php?id=$1 [L,QSA]
+
+# Redirection 404
+ErrorDocument 404 /404.php
