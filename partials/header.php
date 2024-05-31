@@ -23,22 +23,30 @@
             </div>
             <div class="w-50 d-flex justify-content-end text-center">
                 <div class="mx-3">
-                    <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon; ?>" alt="<?= $currentName; ?>" class="icon-option" width="50">
+                    <i class="fa-solid fa-heart fs-4 w-100"></i>
+                    <a href="" class="m-0 fs-12 text-light">Favoris</a>
+                </div>
+                <div class="mx-3">
+                    <i class="fa-solid fa-user fs-4 w-100"></i>
+                    <a href="" class="m-0 fs-12 text-light">Profil</a>
                 </div>
             </div>
             <div class="d-xl-none d-none mobile-nav-menu position-absolute start-0">
                 <ul class="my-2">
-                    <li class="mb-3 text-light">
-                        <a href="/">Accueil</a>
+                    <li class="mb-3">
+                        <a class="text-light my-5" href="/">Accueil</a>
                     </li>
-                    <li class="mb-3 text-light">
-                        <a href="/?pokedex">Pokédex</a>
+                    <li class="mb-3">
+                        <a class="text-light my-5" href="">Pokédex</a>
                     </li>
-                    <li class="mb-3 text-light">
-                        <a href="/?favorites">Favoris</a>
+                    <li class="mb-3">
+                        <a class="text-light my-5" href="/?param">Paramètres</a>
                     </li>
-                    <li class="mb-3 text-light">
-                        <a href="/?param">Paramètres</a>
+                    <li class="mb-3">
+                        <div class="position-relative">
+                            <input type="text" placeholder="ex : pikachu" class="form-control input-search">
+                            <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search me-2 ps-2"></a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -50,7 +58,7 @@
 
             <p class="position-relative w-25">
                 <input type="text" placeholder="ex : pikachu" class="form-control input-search">
-                <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search end-0 me-2 ps-2" href="/"></a>
+                    <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search fa-search-md me-2"></a>
                 </input>
             </p>
 
@@ -60,14 +68,12 @@
             <a href="/?param" class="text-light fw-bold">PARAMETRES</a>
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center">
-                    <div id="profile">
-                        <div class="row">
-                            <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option">
-                        </div>
-                        <div class="row">
-                            <span class="pseudo"><?= $currentName ?? "Profil" ?></span>
-                        </div>
-                    </div>
+                    <i class="fa-solid fa-heart fs-2 w-100"></i>
+                    <a href="" class="m-0 fs-12 text-light">Favoris</a>
+                </div>
+                <div class="mx-3 text-center">
+                    <i class="fa-solid fa-heart fs-2 w-100"></i>
+                    <a href="" class="m-0 fs-12 text-light">Profil</a>
                 </div>
             </div>
         </nav>
