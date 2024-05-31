@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="<?= $currentMode ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <title>POKEDEX</title>
 </head>
 
-<body data-theme="<?= $currentMode ?>">
+<body>
     <header>
         <!-- mobile -->
         <nav class="d-xl-none d-flex justify-content-around align-items-center py-3">
