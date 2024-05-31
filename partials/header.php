@@ -29,7 +29,7 @@
                 </div>
                 <div id="profile">
                     <div class="row">
-                        <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option">
+                        <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>">
                     </div>
                     <div class="row">
                         <a href="/?param"><span class="pseudo fs-5 text-light"><?= $currentName ?? "PROFIL" ?></span></a>
@@ -61,7 +61,7 @@
         <nav class="d-none d-xl-flex justify-content-between align-items-center">
 
             <div class="menu-image py-1">
-                <a href="/?index"><img src="/public/assets/img/logoPokeworld.png" alt=""></a> 
+                <a href="/?index"><img src="/public/assets/img/logoPokeworld.png" alt=""></a>
             </div>
 
             <div class="position-relative">
@@ -81,7 +81,7 @@
                     <div class="mx-3 text-center">
                         <div id="profile">
                             <div class="row">
-                                <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>" class="icon-option">
+                                <img src="public/assets/img/iconeUtilisateur/<?= $currentIcon ?? "../pokeball.png" ?>" alt="<?= $currentName; ?>">
                             </div>
                             <div class="row">
                                 <a href="/?param"><span class="pseudo fs-4 text-light"><?= $currentName ?? "Profil" ?></span></a>
