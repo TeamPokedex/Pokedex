@@ -80,6 +80,7 @@ main .container-sacha img {
   margin-top: 16.5em !important;
   width: 100%;
   text-align: center;
+  z-index: 99999;
 }
 .mobile-nav-menu ul {
   padding: 0;

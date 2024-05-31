@@ -68,11 +68,11 @@
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center">
                     <i class="fa-solid fa-heart fs-2 w-100"></i>
-                    <a href="" class="m-0 fs-12 text-light">Favoris</p>
+                    <a href="" class="m-0 fs-12 text-light">Favoris</a>
                 </div>
                 <div class="mx-3 text-center">
                     <i class="fa-solid fa-heart fs-2 w-100"></i>
-                    <a href="" class="m-0 fs-12 text-light">Profil</p>
+                    <a href="" class="m-0 fs-12 text-light">Profil</a>
                 </div>
             </div>
         </nav>
