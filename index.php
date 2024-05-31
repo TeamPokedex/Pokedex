@@ -2,9 +2,9 @@
 require(__DIR__ . '/models/Cookie.php');
 
 $favorites = getCookieArray("favorites");
-$currentName = getCookie("pseudo");
-$currentIcon = getCookie("icon");
-$currentMode = getCookie("mode");
+$currentName = getCookie("pseudo") ?? "";
+$currentIcon = getCookie("icon") ?? "";
+$currentMode = getCookie("mode") ?? "light";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['favorite_id']) && !empty($_POST['favorite_id'])) {
@@ -25,16 +25,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupérer et sécuriser les données du formulaire
     $currentName = isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : $currentName;
     $currentIcon = isset($_POST['icon']) ? htmlspecialchars($_POST['icon']) : $currentIcon;
-    if (isset($_POST['mode']) && !empty($_POST['mode'])) {
-        $currentMode = 'dark';
-    } else {
-        $currentMode = 'light';
-    }
 
     // Cookies
     saveCookie('pseudo', $currentName);
     saveCookie('icon', $currentIcon);
-    saveCookie('mode', $currentMode);
+}
+if (isset($_POST['changeParam'])) {
+    if (isset($_POST['mode'])) {
+
+        $currentMode = 'dark';
+        saveCookie('mode', $currentMode);
+    } else {
+        $currentMode = 'light';
+        saveCookie('mode', $currentMode);
+    }
 }
 
 if (isset($_GET['pokedex']) || !empty($_GET['type'])) {
