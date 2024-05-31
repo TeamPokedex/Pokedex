@@ -1,4 +1,4 @@
-<footer>
+<footer class="mt-5">
     <div class="row open-sans-regular text-center m-0">
         <div class="col-12 col-md-4 mt-3">
             <div>Mentions légales</div>
