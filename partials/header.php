@@ -71,7 +71,6 @@
                 <a class="fa-solid text-secondary text-decoration-none search-bar-menu position-absolute fa-search me-2 ps-2"></a>
             </div>
 
-            <a href="/" class="text-light fw-bold">ACCUEIL</a>
             <a href="/?pokedex" class="text-light fw-bold">POKEDEX</a>
             <div class="d-flex flex-wrap justify-content-end">
                 <div class="mx-3 text-center d-flex flex-column justify-content-center">
