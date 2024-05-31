@@ -1,17 +1,18 @@
-    <footer>
-        <div class="row open-sans-regular align-items-center align-content-center text-center w-100">
-            <div class="col-12 col-md-4 mt-2">
-                <div>Mentions légales</div>
-            </div>
-            <div class="col-12 col-md-4 mt-2">
-                <div>Politique de confidentialités</div>
-            </div>
-            <div class="col-12 col-md-4 mt-2">
-                <div>Conditions générales</div>
-            </div>
+<footer>
+    <div class="row open-sans-regular text-center m-0">
+        <div class="col-12 col-md-4 mt-3">
+            <div>Mentions légales</div>
         </div>
-        <div class="open-sans-light text-center col-12">Copyright - PokeWorld 2024</div>
-    </footer>
+        <div class="col-12 col-md-4 mt-3">
+            <div>Politique de confidentialités</div>
+        </div>
+        <div class="col-12 col-md-4 mt-3">
+            <div>Conditions générales</div>
+        </div>
+    </div>
+    <div class="spaceElementsFooter"></div>
+    <div class="open-sans-light text-center col-12 pb-2">Copyright - PokeWorld 2024</div>
+</footer>
     
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../public/assets/js/navbar.js"></script>
